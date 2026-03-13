@@ -1,0 +1,22 @@
+inputs:
+  nixpkgs:
+    url: github:NixOS/nixpkgs/nixpkgs-unstable
+  treefmt-nix:
+    url: github:numtide/treefmt-nix
+    inputs:
+      nixpkgs:
+        follows: nixpkgs
+  git-hooks:
+    url: github:cachix/git-hooks.nix
+    inputs:
+      nixpkgs:
+        follows: nixpkgs
+  poly-docs-env:
+    url: github:Alb-O/poly-docs-env
+    flake: false
+  poly-local-inputs:
+    url: github:Alb-O/poly-local-inputs
+    flake: false
+imports:
+  - poly-docs-env
+  - poly-local-inputs
